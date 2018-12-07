@@ -5,16 +5,19 @@
     <title>Carlos Souza Rodrigues Filho</title>
 
     <link rel="stylesheet" href="assets/css/reset.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-
+    <!--<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <style>
         body {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            font-family: 'Source Code Pro', monospace;
+            /*font-family: 'Source Code Pro', monospace;*/
+            font-family: 'Montserrat', sans-serif;
             font-weight: lighter;
             /*background-color: whitesmoke;*/
             padding-top: 30px;
+            color: rgb(50, 50, 50);
+            font-size: .8em;
         }
 
         body strong {
@@ -37,24 +40,28 @@
             padding-bottom: 40px
         }
 
-        body section .title {
-            font-weight: bold;
-            font-size: 1.3em;
-            padding: 5px 0;
-            border-bottom: 2px solid lightgray;
+        .data-section:not(.personal) {
+            display: flex;
         }
 
-        body section:not(.personal) p {
-            text-indent: 10px;
+        .data-section .title {
+            font-weight: bold;
+            font-size: 1.3em;
+            white-space: nowrap;
+            min-width: 130px;
+            text-transform: uppercase;
+        }
+
+        .data-section:not(.personal) p {
+            padding-bottom: 10px;
         }
 
         body section ul li {
-            margin: 10px 0;
-            text-indent: 10px;
+            margin-bottom: 20px;
         }
 
         body section ul li:before {
-            content: '->';
+            content: '-';
         }
 
         .skill-list {
@@ -93,6 +100,7 @@
 <body>
 <header>
     <h1>Carlos Souza Rodrigues Filho</h1>
+    <br/>
     <h2>Software Developer</h2>
 </header>
 <section class="data-section personal">
@@ -102,223 +110,230 @@
 </section>
 <section class="data-section about-me">
     <h3 class="title">About me</h3>
-    <p>
-        Graduated in systems analysis by the <strong>Instituto Federal do Espírito Santo - Campus Santa Teresa</strong>,
-        I am a software developer and lover of music, games and technology.
-    </p>
-    <p>
-        I always enjoy learning new technologies, whether for personal tastes or business needs. It offers a series of
-        technologies for developing full WEB applications from the backend to the front end, as well as being a great
-        PWA enthusiast.
-    </p>
-    <p>
-        Always interested in big and new challenges.
-    </p>
+    <div class="content">
+        <p>
+            Graduated in systems analysis by the <strong>Instituto Federal do Espírito Santo - Campus Santa
+            Teresa</strong>,
+            I am a software developer and lover of music, games and technology.
+        </p>
+        <p>
+            I always enjoy learning new technologies, whether for personal tastes or business needs. It offers a series
+            of
+            technologies for developing full WEB applications from the backend to the front end, as well as being a
+            great
+            PWA enthusiast.
+        </p>
+        <p>
+            Always interested in big and new challenges.
+        </p>
+    </div>
 </section>
 <section class="data-section skills">
     <h3 class="title">Skills</h3>
-    <ul>
-        <li>
-            Advanced knowledge in the development of complete WEB applications
-        </li>
-        <li>
-            Lover of Design Patterns and Object Orientation
-        </li>
-        <li>
-            Exp. in continuous integration, code coverage, unit testing and restful Apis
-        </li>
-        <li>
-            Always cherishing a clean, well-written and organized code
-        </li>
-        <li>
-            In addition to a good UX
-        </li>
-    </ul>
-    <section class="skill-list">
-        <h4 class="skill-list-title"> Programming Languages </h4>
-        <div class="skill-list-items">
-            <div class="skill-list-item">
-                <span class="name">Php</span>
-                <span class="level">advanced</span>
+    <div class="content">
+        <ul>
+            <li>
+                Advanced knowledge in the development of complete WEB applications
+            </li>
+            <li>
+                Lover of Design Patterns and Object Orientation
+            </li>
+            <li>
+                Exp. in continuous integration, code coverage, unit testing and restful Apis
+            </li>
+            <li>
+                Always cherishing a clean, well-written and organized code
+            </li>
+            <li>
+                In addition to a good UX
+            </li>
+        </ul>
+        <section class="skill-list">
+            <h4 class="skill-list-title"> Programming Languages </h4>
+            <div class="skill-list-items">
+                <div class="skill-list-item">
+                    <span class="name">Php</span>
+                    <span class="level">advanced</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Javascript (ES5/ES6)</span>
+                    <span class="level">advanced</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">HTML 5</span>
+                    <span class="level">advanced</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">CSS 3</span>
+                    <span class="level">advanced</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Sass/Scss</span>
+                    <span class="level">advanced</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Java</span>
+                    <span class="level">intermediate</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Typescript</span>
+                    <span class="level">intermediate</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Go</span>
+                    <span class="level">beginner</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Python</span>
+                    <span class="level">beginner</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Shell Script</span>
+                    <span class="level">beginner</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">C</span>
+                    <span class="level">beginner</span>
+                </div>
             </div>
-            <div class="skill-list-item">
-                <span class="name">Javascript (ES5/ES6)</span>
-                <span class="level">advanced</span>
+        </section>
+        <section class="skill-list">
+            <h4 class="skill-list-title"> Databases </h4>
+            <div class="skill-list-items">
+                <div class="skill-list-item">
+                    <span class="name">PostgreSQL</span>
+                    <span class="level">advanced</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">MySQL</span>
+                    <span class="level">advanced</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">MongoDB</span>
+                    <span class="level">intermediate</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Redis</span>
+                    <span class="level">intermediate</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">IndexedDB</span>
+                    <span class="level">beginner</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Cloud Firestore</span>
+                    <span class="level">beginner</span>
+                </div>
             </div>
-            <div class="skill-list-item">
-                <span class="name">HTML 5</span>
-                <span class="level">advanced</span>
+        </section>
+        <section class="skill-list">
+            <h4 class="skill-list-title"> Frameworks & Libraries </h4>
+            <div class="skill-list-items">
+                <div class="skill-list-item">
+                    <span class="name">React</span>
+                    <span class="level">advanced</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Slim PHP</span>
+                    <span class="level">advanced</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Vue</span>
+                    <span class="level">advanced</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Symfony</span>
+                    <span class="level">intermediate</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Doctrine</span>
+                    <span class="level">intermediate</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Vuetify</span>
+                    <span class="level">beginner</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Laravel</span>
+                    <span class="level">beginner</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Eloquent</span>
+                    <span class="level">intermediate</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Php Unit</span>
+                    <span class="level">intermediate</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Socket.io</span>
+                    <span class="level">intermediate</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Express</span>
+                    <span class="level">intermediate</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Babel</span>
+                    <span class="level">intermediate</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Webpack</span>
+                    <span class="level">intermediate</span>
+                </div>
             </div>
-            <div class="skill-list-item">
-                <span class="name">CSS 3</span>
-                <span class="level">advanced</span>
+        </section>
+        <section class="skill-list">
+            <h4 class="skill-list-title"> Versioning </h4>
+            <div class="skill-list-items">
+                <div class="skill-list-item">
+                    <span class="name">Git</span>
+                    <span class="level">advanced</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Github</span>
+                    <span class="level">advanced</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Gitlab</span>
+                    <span class="level">advanced</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Bitbucket</span>
+                    <span class="level">intermediate</span>
+                </div>
             </div>
-            <div class="skill-list-item">
-                <span class="name">Sass/Scss</span>
-                <span class="level">advanced</span>
+        </section>
+        <section class="skill-list">
+            <h4 class="skill-list-title"> Others </h4>
+            <div class="skill-list-items">
+                <div class="skill-list-item">
+                    <span class="name">PWA</span>
+                    <span class="level">advanced</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Firebase</span>
+                    <span class="level">advanced</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Pusher</span>
+                    <span class="level">intermediate</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Arduino</span>
+                    <span class="level">beginner</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">AWS</span>
+                    <span class="level">beginner</span>
+                </div>
+                <div class="skill-list-item">
+                    <span class="name">Restful</span>
+                    <span class="level">beginner</span>
+                </div>
             </div>
-            <div class="skill-list-item">
-                <span class="name">Java</span>
-                <span class="level">intermediate</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Typescript</span>
-                <span class="level">intermediate</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Go</span>
-                <span class="level">beginner</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Python</span>
-                <span class="level">beginner</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Shell Script</span>
-                <span class="level">beginner</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">C</span>
-                <span class="level">beginner</span>
-            </div>
-        </div>
-    </section>
-    <section class="skill-list">
-        <h4 class="skill-list-title"> Databases </h4>
-        <div class="skill-list-items">
-            <div class="skill-list-item">
-                <span class="name">PostgreSQL</span>
-                <span class="level">advanced</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">MySQL</span>
-                <span class="level">advanced</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">MongoDB</span>
-                <span class="level">intermediate</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Redis</span>
-                <span class="level">intermediate</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">IndexedDB</span>
-                <span class="level">beginner</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Cloud Firestore</span>
-                <span class="level">beginner</span>
-            </div>
-        </div>
-    </section>
-    <section class="skill-list">
-        <h4 class="skill-list-title"> Frameworks & Libraries </h4>
-        <div class="skill-list-items">
-            <div class="skill-list-item">
-                <span class="name">React</span>
-                <span class="level">advanced</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Slim PHP</span>
-                <span class="level">advanced</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Vue</span>
-                <span class="level">advanced</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Symfony</span>
-                <span class="level">intermediate</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Doctrine</span>
-                <span class="level">intermediate</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Vuetify</span>
-                <span class="level">beginner</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Laravel</span>
-                <span class="level">beginner</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Eloquent</span>
-                <span class="level">intermediate</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Php Unit</span>
-                <span class="level">intermediate</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Socket.io</span>
-                <span class="level">intermediate</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Express</span>
-                <span class="level">intermediate</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Babel</span>
-                <span class="level">intermediate</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Webpack</span>
-                <span class="level">intermediate</span>
-            </div>
-        </div>
-    </section>
-    <section class="skill-list">
-        <h4 class="skill-list-title"> Versioning </h4>
-        <div class="skill-list-items">
-            <div class="skill-list-item">
-                <span class="name">Git</span>
-                <span class="level">advanced</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Github</span>
-                <span class="level">advanced</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Gitlab</span>
-                <span class="level">advanced</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Bitbucket</span>
-                <span class="level">intermediate</span>
-            </div>
-        </div>
-    </section>
-    <section class="skill-list">
-        <h4 class="skill-list-title"> Others </h4>
-        <div class="skill-list-items">
-            <div class="skill-list-item">
-                <span class="name">PWA</span>
-                <span class="level">advanced</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Firebase</span>
-                <span class="level">advanced</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Pusher</span>
-                <span class="level">intermediate</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Arduino</span>
-                <span class="level">beginner</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">AWS</span>
-                <span class="level">beginner</span>
-            </div>
-            <div class="skill-list-item">
-                <span class="name">Restful</span>
-                <span class="level">beginner</span>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </section>
 </body>
 </html>
