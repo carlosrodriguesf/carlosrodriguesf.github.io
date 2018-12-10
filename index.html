@@ -6,8 +6,8 @@
     <title>Carlos Souza Rodrigues Filho</title>
 
     <link rel="stylesheet" href="assets/css/reset.css"/>
-    <!--<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
     <style>
         body {
             max-width: 900px;
@@ -19,48 +19,63 @@
             font-size: .8em;
         }
 
-        body strong {
+        strong {
             font-weight: bold;
         }
 
-        body header {
+        header {
             text-align: center;
         }
 
-        body header h1 {
+        h1 {
             font-size: 2.3em;
         }
 
-        body header h2 {
+        h2 {
             font-size: 1.7em;
         }
 
-        body header, body section {
+        h3 {
+            font-size: 1.5em;
+        }
+
+        h4 {
+            font-size: 1.3em;
+        }
+
+        header, section {
             padding-bottom: 40px
         }
 
-        .data-section:not(.personal) {
+        .data-group {
             display: flex;
         }
 
-        .data-section .title {
+        .data-group .group-info {
+            min-width: 150px;
+            max-width: 150px;
+        }
+
+        .data-group .group-info > .title {
             font-weight: bold;
             font-size: 1.3em;
-            white-space: nowrap;
-            min-width: 130px;
             text-transform: uppercase;
         }
 
-        .data-section:not(.personal) p {
+        .data-group .group-content {
+            flex-grow: 1;
+        }
+
+        .data-group .group-content p {
             padding-bottom: 10px;
             text-align: justify;
         }
 
-        body section ul li {
+        section ul li {
             margin-bottom: 20px;
         }
 
-        body section ul li:before {
+        section ul li:before {
             content: '-';
         }
 
@@ -96,70 +111,283 @@
             display: block;
         }
 
+        .timeline, .timeline .timeline-item {
+            width: 100%;
+        }
+
+        .timeline, .timeline .timeline-item > * {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 0;
+        }
+
+        .timeline .timeline-item > .title {
+            font-size: 1.5em;
+        }
+
         @media screen and (max-width: 600px) {
-            .data-section:not(.personal) {
+            .data-group {
                 flex-direction: column;
             }
 
-            .data-section .title {
+            .data-group .group-info {
                 padding-bottom: 10px;
+                max-width: 100%;
             }
         }
     </style>
 </head>
 <body>
+
 <header>
     <h1>Carlos Souza Rodrigues Filho</h1>
     <br/>
     <h2>Software Developer</h2>
 </header>
-<section class="data-section personal">
+
+<section class="personal">
     <p>15/05/1996</p>
     <p>carlosrodriguesf96@outlook.com</p>
     <p>Vitória - ES</p>
 </section>
-<section class="data-section about-me">
-    <h3 class="title">About me</h3>
-    <div class="content">
+
+<section class="data-group about-me">
+    <div class="group-info">
+        <h3 class="title">Sobre mim</h3>
+    </div>
+    <div class="group-content">
         <p>
-            Graduated in systems analysis by the <strong>Instituto Federal do Espírito Santo - Campus Santa
-            Teresa</strong>,
-            I am a software developer and lover of music, games and technology.
+            Graduado em análise de sistemas pelo Instituto Federal do Espírito Santo - Campus Santa Teresa, sou
+            desenvolvedor de software e amante de música, games e tecnologia.
         </p>
         <p>
-            I always enjoy learning new technologies, whether for personal tastes or business needs. It offers a series
-            of
-            technologies for developing full WEB applications from the backend to the front end, as well as being a
-            great
-            PWA enthusiast.
+            Eu sempre gosto de aprender novas tecnologias, seja para gostos pessoais ou necessidades de negócios.
+            Trabalho com uma série de tecnologias para o desenvolvimento de aplicativos WEB completos desde o backend
+            até o front end, além de ser um grande entusiasta do PWA.
         </p>
         <p>
-            Always interested in big and new challenges.
+            Sempre interessado em grandes e novos desafios.
         </p>
     </div>
 </section>
-<section class="data-section skills">
-    <h3 class="title">Skills</h3>
-    <div class="content">
+
+<section class="data-group experiences">
+    <div class="group-info">
+        <h3 class="title">Graduação</h3>
+    </div>
+    <div class="group-content">
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4 class="title">Análise e Desenvolvimento de Sistemas</h4>
+                <div class="subtitle">Faculdade, 2013-2016</div>
+                <div class="description">
+                    Instituto Federal do Espírito Santo - Campus Santa Teresa
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="data-group experiences">
+    <div class="group-info">
+        <h3 class="title">Atividades de ensino</h3>
+    </div>
+    <div class="group-content">
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4 class="title">Jornada de Ciencia e Tecnologia/Cultura</h4>
+                <div class="subtitle">
+                    Instituto Federal do Espírito Santo – Campus Santa Teresa, 08/10/2016.
+                </div>
+                <div class="description">
+                    Ministrei uma oficina de Desenvolvimento WEB Com Angular JS
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="data-group experiences">
+    <div class="group-info">
+        <h3 class="title">Atividades de pesquisa</h3>
+    </div>
+    <div class="group-content">
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4 class="title">Bolsista de Iniciação Científica</h4>
+                <div class="subtitle">
+                    Maycon Guedes Cordeiro, 01/07/2014 - 31/06/2015
+                </div>
+                <div class="description">
+                    Desenvolvimento de um aplicativo para geração da grade de horario de aulas baseado em algorítmo
+                    genético
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="data-group experiences">
+    <div class="group-info">
+        <h3 class="title">
+            Apresentação de trabalho em evento científico
+        </h3>
+    </div>
+    <div class="group-content">
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4 class="title">
+                    XI Jornada de Iniciação Científica, Desenvolvimento Tecnológico e Inovação do IFES –
+                    Campus Venda Nova do Imigrante
+                </h4>
+                <div class="subtitle">
+                    Pôster, 17 e 18 de Outubro de 2016
+                </div>
+                <div class="description">
+                    Desenvolvimento de Aplicativo Para Geração de Grade de Horario de Aulas Baseado em Algoritmo
+                    genético
+                </div>
+            </div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4 class="title">
+                    17º Fórum Internacional - Software Livre (FISL17)
+                </h4>
+                <div class="subtitle">
+                    Oral, 16 de Julho de 2016
+                </div>
+                <div class="description">
+                    Desenvolvimento de jogos educacionais adaptados para crianças especiais.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="data-group experiences">
+    <div class="group-info">
+        <h3 class="title">
+            Participação em evento científico
+        </h3>
+    </div>
+    <div class="group-content">
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="title">
+                    11º Fórum Espírito Livre, Rede Espírito Livre
+                </div>
+                <div class="subtitle">
+                    24 e 25 de Setembro de 2015
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="title">
+                    Semana Nacional de Ciência e Tecnologia – Luz, Ciência e Vida, Instituto Federal do Espírito Santo
+                    (IFES) – Campus Santa Teresa
+                </div>
+                <div class="subtitle">
+                    05 à 07 de Novembro de 2015
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="title">
+                    13º Fórum Espírito Livre, Rede Espírito Livre
+                </div>
+                <div class="subtitle">
+                    08 à 10 de Junho de 2016
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="title">
+                    17º Fórum Internacional - Software Livre (FISL17) – A tecnologia que liberta, Associação Software
+                    Livre.org
+                </div>
+                <div class="subtitle">
+                    13 à 16 de Julho de 2016
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="title">
+                    Jornada de Ciência e Tecnologia/Cultura, Instituto Federal do Espírito Santo (IFES) – Campus Santa
+                    Teresa
+                </div>
+                <div class="subtitle">
+                    7 à 8 de Outubro de 2016
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="data-group experiences">
+    <div class="group-info">
+        <h3 class="title">Experiêcias</h3>
+
+        <div class="subtitle">2013-2017</div>
+    </div>
+    <div class="group-content">
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4 class="title">Viação Aguia Branca e Salutaris</h4>
+                <div class="subtitle">Menor Aprendiz, 15/08/2010-15/06/2012</div>
+            </div>
+
+            <div class="timeline-item">
+                <h4 class="title">IFES - Santa Teresa</h4>
+                <div class="subtitle">Trainee, 28/07/2013-27/07/2015</div>
+            </div>
+
+            <div class="timeline-item">
+                <h4 class="title">Móveis Simonetti</h4>
+                <div class="subtitle">Developer, 2017-2018</div>
+                <div class="description">
+                    <p>
+                        Trabalhando com as tecnologias PHP, HTML, CSS, JavaScript/NodeJS, Implementando melhorias e
+                        realizando manutenção no Sistema PDV da empresa, além de desenvolvimento de novos serviços e
+                        integrações com sistemas de outras empresas
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <h4 class="title">Controlook</h4>
+                <div class="subtitle">Developer, 2018-NOW</div>
+                <div class="description">
+                    <p>
+                        Reponsável pelo desenvolvimento de novas soluções tecnológicas e manutenção das já existes,
+                        escrevendo e revisando códigos de terceiros
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="data-group skills">
+    <div class="group-info">
+        <h3 class="title">Habilidades</h3>
+    </div>
+    <div class="group-content">
         <ul>
             <li>
-                Advanced knowledge in the development of complete WEB applications
+                Conhecimento avançado no desenvolvimento de aplicações WEB completas
             </li>
             <li>
-                Lover of Design Patterns and Object Orientation
+                Amante de boas práticas, padrões de projeto e orientação a objetos
             </li>
             <li>
-                Exp. in continuous integration, code coverage, unit testing and restful Apis
+                Experiencia em integração contínua, cobertura de código, testes unitários e desenvolvimento de APIs Rest
             </li>
             <li>
-                Always cherishing a clean, well-written and organized code
+                Presando sempre por um código limpo, bem escrito e organizado
             </li>
             <li>
-                In addition to a good UX
+                Sempre preocupado com uma boa UX
             </li>
         </ul>
         <section class="skill-list">
-            <h4 class="skill-list-title"> Programming Languages </h4>
+            <h4 class="skill-list-title"> Linguagens de Programação </h4>
             <div class="skill-list-items">
                 <div class="skill-list-item">
                     <span class="name">Php</span>
@@ -208,7 +436,7 @@
             </div>
         </section>
         <section class="skill-list">
-            <h4 class="skill-list-title"> Databases </h4>
+            <h4 class="skill-list-title"> Bancos de dados </h4>
             <div class="skill-list-items">
                 <div class="skill-list-item">
                     <span class="name">PostgreSQL</span>
@@ -294,7 +522,7 @@
             </div>
         </section>
         <section class="skill-list">
-            <h4 class="skill-list-title"> Versioning </h4>
+            <h4 class="skill-list-title"> Versionamento </h4>
             <div class="skill-list-items">
                 <div class="skill-list-item">
                     <span class="name">Git</span>
@@ -315,7 +543,7 @@
             </div>
         </section>
         <section class="skill-list">
-            <h4 class="skill-list-title"> Others </h4>
+            <h4 class="skill-list-title"> Outros </h4>
             <div class="skill-list-items">
                 <div class="skill-list-item">
                     <span class="name">PWA</span>
