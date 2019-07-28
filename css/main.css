@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    color: #323b49;
+    font-size: .8em;
+}
+
+header {
+    background-color: #fbfbfd;
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 3em;
+    padding: 40px;
+}
+
+.social-links {
+    background-color: #e7ebf3;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.social-links * {
+    color: #323b49;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.layout {
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+.data-section {
+    padding: 20px;
+}
+
+.data-section:not(:last-child) {
+    padding-bottom: 0px;
+}
+
+.data-section h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.data-section p {
+    text-indent: 0px;
+    padding: 5px;
+    text-align: justify;
+}
+
+.data-section.contact i.icon {
+                display: inline-block;
+                width: 10px;
+                margin: 5px;
+}
+
+.data-section.contact label {
+    display: block;
+    margin: 10px;
+}
+
+.timeline-entry {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.timeline-entry > .title {
+    min-width: 150px;
+    text-align: right;
+}
+
+.timeline-entry > .title > * {
+    margin-right: 10px;
+    color: #62738d;
+}
+
+.timeline-entry > .title h6 {
+    font-size: .9em;
+    font-weight: bold;
+    color: #62738d;
+}
+
+.timeline-entry > .title label{
+    font-size: .7em;
+}
+
+.timeline-entry > .content h4 {
+    font-size: 1.3em;
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+ section ul li {
+    margin-bottom: 20px;
+}
+section ul li:before {
+    content: '-';
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.skill {
+    display: inline-flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    margin: 5px;
+    margin-top: 0;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: .8em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #323b49;
+    outline: none;
+}
+
+.skill.low-level {
+    opacity: .5;
+}
+
+@media screen and (max-width: 1000px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .timeline-entry {
+        flex-direction: column-reverse;
+    }
+    
+    .timeline-entry.no-reverse {
+        flex-direction: column;
+    }
+    
+    .timeline-entry .title {
+        text-align: left;
+        padding: 5px;
+        display: flex;
+    }
+    
+    .timeline-entry .title label {
+        white-space: nowrap;
+    }
+    
+    .timeline-entry .title > h6 {
+        width: 100%;
+    }
+}
